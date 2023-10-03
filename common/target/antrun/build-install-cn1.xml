@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="install-cn1">
+  <target name="install-cn1">
+    <available file="/Users/wangli/.codenameone/guibuilder.jar" property="codenameone.present" />
+    <mkdir dir="/Users/wangli/.codenameone" />
+    <mkdir dir="/Users/wangli/Documents/java-workspace/wl4g-projects/socksproxy/common/target/codenameone/tmpProject" />
+    <get skipexisting="true" src="https://www.codenameone.com/files/updates/UpdateCodenameOne.jar" dest="/Users/wangli/UpdateCodenameOne.jar" />
+    <java fork="true" jar="/Users/wangli/UpdateCodenameOne.jar">
+      <arg value="/Users/wangli/Documents/java-workspace/wl4g-projects/socksproxy/common/target/codenameone/tmpProject" />
+      <arg value="force" />
+    </java>
+  </target>
+</project>
